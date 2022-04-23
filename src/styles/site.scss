@@ -3,10 +3,13 @@ html, body, #___gatsby {
   padding: 0;
 }
 
+body, main {
+  background: black;
+}
+
 main {
   margin: 0;
   padding: 10px;
-  background: black;
   width: 100vw;
   height: 100vh;
   color: #FFF;
@@ -18,7 +21,13 @@ main {
 
 main article {
   margin: auto;
-  padding: calc(50vh - 100px);
+  padding: calc(50vh - 100px) 0;
   height: 200px;
   width: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  main article {
+    width: 100%;
+  }
 }
