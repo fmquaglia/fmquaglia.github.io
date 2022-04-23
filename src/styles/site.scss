@@ -1,0 +1,24 @@
+html, body, #___gatsby {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0;
+  padding: 10px;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  color: #FFF;
+  font-family: monospace;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+main article {
+  margin: auto;
+  padding: calc(50vh - 100px);
+  height: 200px;
+  width: 200px;
+}
