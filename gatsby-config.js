@@ -43,6 +43,13 @@ module.exports = {
         "path": "./src/pages/"
       },
       __key: "pages"
+    },
+    {
+      resolve: `gatsby-plugin-output`,
+      options: {
+        publicPath: 'public',
+        rmPublicFolder: true
+      }
     }
   ]
 };
