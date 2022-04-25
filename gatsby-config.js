@@ -48,7 +48,7 @@ module.exports = {
       resolve: `gatsby-plugin-output`,
       options: {
         publicPath: 'public',
-        rmPublicFolder: true
+        rmPublicFolder: false
       }
     }
   ]
