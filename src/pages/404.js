@@ -1,25 +1,21 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image";
+import Layout from "../components/layout";
 
 // markup
 const NotFoundPage = () => {
   return (
-    <main>
+    <Layout>
       <article>
         <title>Not found</title>
-        <StaticImage src={"../images/fabricio.png"} alt={"Fabricio Quagliariello"}/>
         <h1>Page not found</h1>
         <p>
           <code>
             /dev/null
           </code>
         </p>
-        <p>
-          <Link to="/">Go home</Link>
-        </p>
       </article>
-    </main>
+    </Layout>
   )
 }
 
