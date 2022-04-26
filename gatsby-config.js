@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Fabricio Cloud`,
-    siteUrl: `https://fabricio.cloud`
+    siteUrl: `https://fabricio.cloud`,
+    description: `Fabricio Q personal webiste`
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -48,7 +49,7 @@ module.exports = {
       resolve: `gatsby-plugin-output`,
       options: {
         publicPath: 'public',
-        rmPublicFolder: false
+        rmPublicFolder: true
       }
     }
   ]
