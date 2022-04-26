@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfabricio_cloud=self.webpackChunkfabricio_cloud||[]).push([[678],{6558:function(e,l,t){t.r(l);var n=t(7294),a=t(8678),c=t(262);l.default=function(){return n.createElement(a.Z,null,n.createElement(c.Z,{title:"Homepage"}),n.createElement("article",null,n.createElement("title",null,"Fabricio Quagliariello"),n.createElement("h1",null,"Coming soon.")))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-6c61cb40fb00a96029a0.js.map

@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "OUTPUT_DIR=docs gatsby build",
+    "build": "OUTPUT_DIR=docs gatsby build && echo fabricio.cloud > docs/CNAME",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },

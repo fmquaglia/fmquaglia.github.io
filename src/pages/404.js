@@ -1,11 +1,12 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 // markup
 const NotFoundPage = () => {
   return (
     <Layout>
+      <Seo title={'Page not found'}/>
       <article>
         <title>Not found</title>
         <h1>Page not found</h1>
