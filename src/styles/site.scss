@@ -3,31 +3,55 @@ html, body, #___gatsby {
   padding: 0;
 }
 
-body, main {
+body {
   background: black;
-}
-
-main {
-  margin: 0;
-  padding: 10px;
-  width: 100vw;
-  height: 100vh;
-  color: #FFF;
+  color: #FFFFFF;
   font-family: monospace;
-  display: inline-block;
-  vertical-align: middle;
   text-align: center;
 }
 
-main article {
-  margin: auto;
-  padding: calc(50vh - 100px) 0;
-  height: 200px;
-  width: 200px;
-}
+.Layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 
-@media screen and (max-width: 600px) {
-  main article {
-    width: 100%;
+  header {
+    margin-top: 15px;
+
+    h1 {
+      margin: 0;
+      display: inline-block;
+      min-width: 96px;
+      font-size: 18px;
+      padding-top: 96px;
+      background: transparent url("../images/fabricio.png") no-repeat top center;
+
+      a {
+        text-decoration: none;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  main {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    article {
+      text-align: center;
+      vertical-align: middle;
+      margin: auto;
+      width: 200px;
+    }
+  }
+
+  footer {
+    padding-bottom: 15px;
   }
 }
+
+
+
