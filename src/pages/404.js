@@ -3,8 +3,8 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 // markup
-const NotFoundPage = () => {
-  return (
+const NotFoundPage = () =>
+  (
     <Layout>
       <Seo title={'Page not found'}/>
       <article>
@@ -18,6 +18,5 @@ const NotFoundPage = () => {
       </article>
     </Layout>
   )
-}
 
-export default NotFoundPage
+export default NotFoundPage;

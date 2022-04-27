@@ -41,15 +41,35 @@ body {
     display: flex;
 
     article {
-      text-align: center;
       vertical-align: middle;
       margin: auto;
-      width: 200px;
+      max-width: 600px;
     }
   }
 
   footer {
     padding-bottom: 15px;
+  }
+}
+
+.Nav {
+  margin: 15px auto;
+  a {
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    &:last-of-type {
+      padding-right: 0;
+    }
+    &:hover, &.current {
+      text-decoration: underline;
+    }
+    &.current {
+      font-weight: bold;
+      text-decoration: none;
+    }
   }
 }
 
