@@ -46,6 +46,14 @@ module.exports = {
       __key: "pages"
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "posts",
+        "path": "./posts/"
+      },
+      __key: "posts"
+    },
+    {
       resolve: `gatsby-plugin-output`,
       options: {
         publicPath: 'public',
