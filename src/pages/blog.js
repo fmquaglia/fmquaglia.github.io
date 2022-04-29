@@ -1,13 +1,24 @@
 import * as React from "react"
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
-export const pageQuery = graphql`
-  {}
+export const query = graphql`
+  query AllPosts {
+    allMdx {
+      nodes {
+        frontmatter {
+          title
+        }
+        slug
+      }
+    }
+  }
 `;
 
-const BlogPage = () => {
+const BlogPage = ({data}) => {
+  const posts = data.allMdx.nodes;
+
   return (
     <Layout>
       <Seo title={'Blog'}/>
@@ -16,6 +27,18 @@ const BlogPage = () => {
         <h1>
           Blog
         </h1>
+        <ul>
+          {
+            posts.map((post) => {
+              return <li>
+                <Link to={post.slug} key={post.slug}>
+                  {post.frontmatter.title}
+                </Link>
+
+              </li>
+            })
+          }
+        </ul>
       </article>
     </Layout>
   )

@@ -1,6 +1,6 @@
 import React from "react";
-import '../styles/site.scss'
 import { Link } from "gatsby";
+import '../styles/site.scss'
 
 const Layout = ({children}) => (
   <div className="Layout">

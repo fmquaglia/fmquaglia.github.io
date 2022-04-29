@@ -1,0 +1,20 @@
+GRAPHQL http://localhost:8000/___graphql
+Content-Type: application/graphql
+
+query {
+  allDirectory {
+    distinct(field: absolutePath)
+  }
+}
+
+
+###
+
+POST https://httpbin.org/post
+Content-Type: application/json
+X-JSON-Type: {name:string, age:number}
+
+{
+  "name": "foo",
+  "age": 4
+}

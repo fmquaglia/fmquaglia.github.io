@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
@@ -24,6 +24,7 @@ const BlogPage = ({data}) => {
       <article>
         <h1>{data.mdx.frontmatter.title}</h1>
         <MDXRenderer>{post.body}</MDXRenderer>
+        <p><Link to={'/blog'}>Back</Link></p>
       </article>
     </Layout>
   );
