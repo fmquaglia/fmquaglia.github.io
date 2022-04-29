@@ -30,11 +30,10 @@ const BlogPage = ({data}) => {
         <ul>
           {
             posts.map((post) => {
-              return <li>
-                <Link to={post.slug} key={post.slug}>
+              return <li key={post.slug}>
+                <Link to={post.slug}>
                   {post.frontmatter.title}
                 </Link>
-
               </li>
             })
           }
