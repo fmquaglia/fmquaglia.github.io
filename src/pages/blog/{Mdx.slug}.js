@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import {MDXProvider} from "@mdx-js/react";
+import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
@@ -18,19 +18,19 @@ export const query = graphql`
       }
       body
     }
-  }    
+  }
 `;
 
 const BlogPage = ({data}) => {
-  const post = data.mdx;
+  const {frontmatter, body} = data.mdx;
 
   return (
     <Layout>
-      <Seo title={data.mdx.frontmatter.title}/>
+      <Seo title={frontmatter.title}/>
       <article>
-        <h1>{data.mdx.frontmatter.title}</h1>
+        <h1>{frontmatter.title}</h1>
         <MDXProvider components={components}>
-          <MDXRenderer>{post.body}</MDXRenderer>
+          <MDXRenderer>{body}</MDXRenderer>
         </MDXProvider>
         <p><Link to={'/blog'}>Back</Link></p>
       </article>

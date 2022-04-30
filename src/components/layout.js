@@ -1,17 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
 import '../styles/site.scss'
+import Nav from "./nav";
 
 const Layout = ({children}) => (
   <div className="Layout">
-    <header>
-      <h1>
-        <Link to="/">
-          fabricio.cloud
-        </Link>
-      </h1>
-    </header>
-    <main>{children}</main>
+    <Nav/>
+    <main>
+      {children}
+    </main>
     <footer>
       &copy; 2022 - Fabricio Q
     </footer>

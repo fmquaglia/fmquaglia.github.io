@@ -1,13 +1,20 @@
+@mixin dark {
+  background: #000000;
+  color: #ffffff;
+}
+
+@mixin light {
+  background: #ffffff;
+  color: #000000;
+}
+
 html, body, #___gatsby {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: black;
-  color: #FFFFFF;
   font-family: monospace;
-  text-align: center;
 }
 
 .Layout {
@@ -17,19 +24,51 @@ body {
   height: 100vh;
 
   header {
-    margin-top: 15px;
+    @include dark;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-end;
+    padding-top: 15px;
 
-    h1 {
+    h1.logo {
+      flex-shrink: 1;
+      width: 96px;
+      height: 0;
       margin: 0;
-      display: inline-block;
-      min-width: 96px;
+      padding: 96px 10px 10px;
       font-size: 18px;
-      padding-top: 96px;
       background: transparent url("../images/fabricio.png") no-repeat top center;
 
-      a {
+      & > a {
         text-decoration: none;
-        color: #FFFFFF;
+        font-size: 0;
+      }
+    }
+
+    & > nav {
+      margin-left: -116px;
+      text-align: center;
+      justify-content: center;
+      flex-grow: 1;
+      display: flex;
+      gap: 10px;
+
+      a {
+        align-self: flex-end;
+        display: inline-block;
+        padding: 15px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 24px;
+
+        &:not(.current):hover {
+          text-decoration: underline;
+        }
+
+        &.current {
+          @include light;
+        }
       }
     }
   }
@@ -49,7 +88,9 @@ body {
   }
 
   footer {
-    padding-bottom: 15px;
+    @include dark;
+    padding: 15px 0 20px;
+    text-align: center;
   }
 
   pre.prism-code {
