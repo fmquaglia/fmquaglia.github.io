@@ -1,11 +1,12 @@
 import * as React from "react"
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import PostList from "../components/postlist";
 
 export const query = graphql`
-  query AllPosts {
-    allMdx {
+  query {
+    posts: allMdx {
       nodes {
         frontmatter {
           title
@@ -16,28 +17,18 @@ export const query = graphql`
   }
 `;
 
+
 const BlogPage = ({data}) => {
-  const posts = data.allMdx.nodes;
 
   return (
     <Layout>
       <Seo title={'Blog'}/>
       <article>
         <title>Blog</title>
-        <h1>
-          Blog
-        </h1>
-        <ul>
-          {
-            posts.map((post) => {
-              return <li key={post.slug}>
-                <Link to={post.slug}>
-                  {post.frontmatter.title}
-                </Link>
-              </li>
-            })
-          }
-        </ul>
+        <section>
+          <h2>Latest Articles</h2>
+          <PostList posts={data.posts.nodes}/>
+        </section>
       </article>
     </Layout>
   )

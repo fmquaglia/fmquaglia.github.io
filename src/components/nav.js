@@ -11,6 +11,7 @@ const Nav = () => {
       </h1>
       <nav>
         <Link activeClassName={'current'} to="/">Home</Link>
+        <Link activeClassName={'current'} to="/about">About</Link>
         <Link activeClassName={'current'} to="/blog">Blog</Link>
       </nav>
     </header>
